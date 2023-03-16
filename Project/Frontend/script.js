@@ -41,7 +41,7 @@ function clickedAddToCart () {
   //Remove card after 5 seconds within 0.3 seconds
   setTimeout(function () {
     cartCard.classList.add('hide-cart');
-    setTimeout(() => {
+    setTimeout(function() {
       cartCard.remove();
     }, 300);
   }, 5000);
