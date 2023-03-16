@@ -399,13 +399,13 @@ transition: transform var(--card-transition-transform-time) ease-out;
 
 }
 
-/*
+
 .product-card:active {
   transform: scale(1);
   box-shadow: 0 15px 24px rgba(0, 0, 0, 0.055),
     0 15px 24px rgba(0,0,0,0.31);
 }
-*/
+
 
 .product-card-container {
   padding: 1% 2%;
