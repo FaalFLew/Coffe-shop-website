@@ -1,5 +1,5 @@
 
-/*select all add to cart buttons and the cards container*/
+/*select the cards container, and all 'add to cart' buttons */
 const cartButtons = document.querySelectorAll('.add-to-cart');
 const cartCardContainer = document.querySelector('.cart-card-container');
 let cartItemCount = 0;
@@ -30,18 +30,18 @@ function clickedAddToCart () {
   const cartCardCloseButton = cartCard.querySelector('.cart-card-close-button');
   cartCardCloseButton.addEventListener('click', function() {
   // add class that gives CSS fade out effect
-  card.classList.add('hide-cart');
+  cartCard.classList.add('hide-cart');
   
   // remove card after 0.3 seconds
     setTimeout(function () {
-    card.remove();
+    cartCard.remove();
   }, 300); 
 });
   
   //Remove card after 5 seconds within 0.3 seconds
   setTimeout(function () {
     cartCard.classList.add('hide-cart');
-    setTimeout(function() {
+    setTimeout(function () {
       cartCard.remove();
     }, 300);
   }, 5000);
