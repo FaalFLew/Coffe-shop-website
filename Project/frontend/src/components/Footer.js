@@ -35,6 +35,22 @@ const Footer = () => {
     { url: '#trademark', label: 'third' },
   ]}
 />
+<FooterMenuItem
+  dataType="Contact"
+  title="Get in Touch"
+  links={[
+    { url: '#policy', label: 'Policy' },
+    { url: '#trademark', label: 'third' },
+  ]}
+/>
+<FooterMenuItem
+  dataType="Contact"
+  title="Get in Touch"
+  links={[
+    { url: '#policy', label: 'Policy' },
+    { url: '#trademark', label: 'third' },
+  ]}
+/>
 
 <FooterMenuItem
   dataType="Payment"
@@ -43,6 +59,7 @@ const Footer = () => {
     { url: '#policy', label: 'Policy' },
     { url: '#trademark', label: 'Trademark' },
     { url: '#trademark', label: 'The last' },
+    
   ]}
 />
 

@@ -2,7 +2,7 @@ import '../css/Global.css'
 import '../css/AddToCart.css'
 
 
-const AddToCart = ({color, text, clicked}) => {
+const AddToCart = ({color, text, clicked, width}) => {
   
   return (
     <>
@@ -11,7 +11,7 @@ const AddToCart = ({color, text, clicked}) => {
        aria-label="Add Coffee Bag to Cart"
        type="button"
        onClick={clicked}
-       style={{ backgroundColor: color || undefined }}> 
+       style={{ backgroundColor: color || undefined, width: width || undefined  }}> 
       {text}
       </button>
 

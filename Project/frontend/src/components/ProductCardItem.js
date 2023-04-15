@@ -1,12 +1,12 @@
 import logo from '../img/MockupProduct.png'; // import the image
 import AddToCart from './AddToCart.js'; // import the image
 import '../css/Global.css'
-import '../css/ProductCards.css'
+import '../css/ProductCardItem.css'
 
-const ProductCardItem = ({img, title, category, price}) => {
+const ProductCardItem = ({img, title, category, price,link}) => {
   return (
     <article className="product-card">
-    <a href="#home" className="product-card-page">
+    <a href={link} className="product-card-page">
     <div className="product-card-container">
     <figure className="product-image">
       <img src={img} alt="Coffee Bag" />
@@ -26,7 +26,7 @@ const ProductCardItem = ({img, title, category, price}) => {
 
 ProductCardItem.defaultProps = {
     img:logo,
-    title: 'Coffe Bag',
+    title: 'Coffee Bag',
     category:'Arabica',
     price:'$5.99'
 }

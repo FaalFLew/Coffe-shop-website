@@ -15,7 +15,6 @@ const FooterMenuItem = ({title,dataType, links}) => {
 )
 }
 
-
 FooterMenuItem.defaultProps = {
     text:'Add to Cart'
 }

@@ -1,7 +1,11 @@
  /*footer related css*/
 
 
-  
+
+.site-footer {
+  background-color:var(--main-background-color);
+
+}
 
   /* For larger screens */
   .footer-menus-section {
@@ -11,6 +15,9 @@
     background-color:var(--main-background-color);
     color:var(--main-text-color);
     padding: 1.1rem 0;  
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .newsletter{
@@ -56,12 +63,9 @@ color:var(--main-text-color);
     .footer-menus-section {
         flex-wrap: wrap;
         padding-left: 1rem;
-    }
-   
-    .footer-menu-item {
-        flex-basis: 50%;
-        justify-content: flex-start;
-        align-items: center;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
     }
 }
 

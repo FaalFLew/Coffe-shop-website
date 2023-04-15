@@ -11,7 +11,7 @@ const ProductCards = () => {
 
 {/* create a function that displays elements from db
 if empty then "no products to show here" message */}
-   <ProductCardItem />
+   <ProductCardItem link={"/productItem"} />
    <ProductCardItem />
    <ProductCardItem />
    <ProductCardItem />

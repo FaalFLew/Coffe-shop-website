@@ -1,3 +1,4 @@
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -14,7 +15,6 @@
       transform: translateY(-5px) scale(1.01);
       box-shadow: 0 24px 36px rgba(0,0,0,0.055),
         0 24px 46px rgba(0,0,0,0.11);
-        border:solid 1px var(--button-hover-border-color);
         border-radius: 8px;
         transition: transform var(--card-transition-transform-time) ease-out, box-shadow var(--card-transition-box-shadow-time) ease-out;
     }
@@ -22,9 +22,8 @@
     .product-card:active {
       transform: scale(1);
       box-shadow: 0 15px 24px rgba(0, 0, 0, 0.055),
-        0 15px 24px rgba(0,0,0,0.31);
+      0 15px 24px rgba(0,0,0,0.31);
     }
-    
     
     .product-card-container {
       margin: 0rem 0rem 0.5rem 0rem;
@@ -32,13 +31,13 @@
     }
     
     .product-image img {
+    border-bottom:1px solid rgb(166, 166, 166);
     width: 100%;
     transition: transform var(--card-transition-transform-time) ease-out;
     }
     
     .product-card:hover img {
     transform: scale(1.01);
-    border-radius: 12px;
     transition: transform var(--card-transition-transform-time) ease-out;
     }
     
