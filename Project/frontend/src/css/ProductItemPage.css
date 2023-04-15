@@ -38,7 +38,7 @@ margin-top: 1rem;
   border-bottom: 1px solid rgb(95, 95, 95);
 }
 
-.product-title{
+.product-single-title{
   margin-bottom:2rem;
   border-bottom: 1px solid rgb(95, 95, 95);;
 }
@@ -48,12 +48,18 @@ margin-top: 1rem;
   text-align: center;
 }
 
-
 main {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   margin-top: 7rem;
+}
+
+.product-producer-details {
+  border-bottom: 1px solid rgb(95, 95, 95);;
+  padding:1.5rem 0;
+
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 767px) {
