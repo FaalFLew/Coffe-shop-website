@@ -1,6 +1,6 @@
 import '../css/Global.css'
 import '../css/ProductCards.css'
-import ProductCardItem from './ProductCardItem.js'; // import the image
+import ProductCardItem from './ProductCardItem.js';
 
 const ProductCards = () => {
   return (
@@ -12,7 +12,7 @@ const ProductCards = () => {
 {/* create a function that displays elements from db
 if empty then "no products to show here" message */}
    <ProductCardItem link={"/productItem"} />
-   <ProductCardItem />
+   <ProductCardItem img="https://www.shutterstock.com/image-photo/harbor-city-trondheim-norway-260nw-1186327096.jpg"/>
    <ProductCardItem />
    <ProductCardItem />
    <ProductCardItem />

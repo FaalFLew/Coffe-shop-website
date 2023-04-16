@@ -1,5 +1,5 @@
-import logo from '../img/MockupProduct.png'; // import the image
-import AddToCart from './AddToCart.js'; // import the image
+import logo from '../img/MockupProduct.png';
+import AddToCart from './AddToCart.js';
 import '../css/Global.css'
 import '../css/ProductCardItem.css'
 

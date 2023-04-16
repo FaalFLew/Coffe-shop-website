@@ -1,8 +1,9 @@
 import '../css/ProductItemPage.css'
 import '../css/Global.css'
-import AddToCart from './AddToCart.js'; // import the image
+import AddToCart from './AddToCart.js'; 
 import QuantityCounter from './QuantityCounter.js';
-import logo from '../img/MockupProduct.png'; // import the image
+import RecommendedProduct from './RecommendedProduct';
+import logo from '../img/MockupProduct.png';
 
 const ProductItemPage = () => {
   return (
@@ -33,6 +34,9 @@ const ProductItemPage = () => {
          </div>
         </div>
     </div>
+
+<RecommendedProduct />
+
 </main>
   )
 }

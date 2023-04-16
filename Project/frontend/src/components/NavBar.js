@@ -1,6 +1,6 @@
 import '../css/Global.css'
 import '../css/NavBar.css'
-import logo from '../img/best21.png'; // import the image
+import logo from '../img/best21.png';
 
 const NavBar = () => {
   return (
