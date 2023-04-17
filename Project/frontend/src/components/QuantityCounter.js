@@ -23,7 +23,7 @@ import '../css/QuantityCounter.css';
   };
 
   return (
-<div>
+<div className="quantity-counter-container">
 <label className="label">Quantity</label>
 
     <div className="quantity-counter">

@@ -28,7 +28,10 @@ const ProductItemPage = () => {
             <details><summary class="product-extra-details">Producer Information</summary> insert production country, suggestions on usage and more.</details>
             </div>
          </div>
+         <div className='product-price'> $5.99</div>
+
          <QuantityCounter />
+
          <div class="button-container">
          <AddToCart width={"100%"}/>
          </div>
