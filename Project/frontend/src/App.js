@@ -1,18 +1,21 @@
 import './App.css';
 import NavBar from './components/NavBar.js'
-import ProductCards from './components/ProductCards.js'
+import Explore from './pages/Explore.js'
 import Footer from './components/Footer.js'
-import ProductItemPage from './components/ProductItemPage.js'
-import Register from './components/Register.js';
-import Login from './components/Login.js';
+import ProductItem from './pages/ProductItem.js'
+import Register from './pages/Register.js'
+import Login from './pages/Login.js';
+import Shipping from './pages/Shipping.js';
+import Options from './components/Options.js'
+import Cart from './pages/Cart.js';
 
 
 function App() {
   return (
-    <>    
+    <> 
     <NavBar />
-    <Login/>
-    <Footer />
+    <Cart />
+    <Footer/>
 
     </>
   );

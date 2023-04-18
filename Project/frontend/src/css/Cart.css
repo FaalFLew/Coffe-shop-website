@@ -1,0 +1,65 @@
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(244, 244, 244);
+  }
+
+  .cart-item img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .cart-item-details {
+    width: 75%;
+    margin:1rem 1rem;
+  }
+  .cart-item-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .cart-item-price {
+    font-weight: 800;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      text-align: center;
+
+    }
+    .cart-item img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .cart-item-details {
+        width: 75%;
+        align-self: center;
+     
+      }
+  }
+  
+
+/* this to customize QuantityCounter on this page/component*/
+
+.cart-item .quantity-counter {
+    margin-top:1rem;
+    margin-bottom:1rem;
+}  
+
+.cart-item .quantity-counter-button, .cart-item .quantity-counter-input {
+    --counter-button-width:2rem;
+    --counter-input-width:3rem;
+    font-size: 0.8rem;
+    --counter-height: 2rem;
+  }
+
+.cart-item .label {
+    display: inline-block;
+    margin-right:1rem;
+}
+  

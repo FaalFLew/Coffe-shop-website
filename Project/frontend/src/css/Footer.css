@@ -30,17 +30,14 @@
 }
 
 .newsletter-signup-form {
-  padding:0 2rem;
   display: flex;
 }
 
 .newsletter-input {
-    width: 250px;
+    width: 240px;
     padding: 12px 20px;
-    margin: 0rem 0;
-    box-sizing: border-box;
     border: 1px solid var(--second-text-color);
-    outline: none;
+    outline: transparent;
     border-radius: 2px;
 }
 
@@ -62,8 +59,7 @@ color:var(--main-text-color);
     .footer-menus-section {
         flex-wrap: wrap;
         padding-left: 1rem;
-        width: 100%;
-        max-width: 540px;
+        width: 95%;
         margin: 0 auto;
     }
 }

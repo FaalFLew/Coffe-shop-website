@@ -1,6 +1,6 @@
 import '../css/Global.css'
 import '../css/ProductCards.css'
-import ProductCardItem from './ProductCardItem.js';
+import ProductCardItem from '../components/ProductCardItem.js';
 
 const ProductCards = () => {
   return (

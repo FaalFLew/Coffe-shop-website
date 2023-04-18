@@ -43,7 +43,6 @@
   .signin {
     background-color: #f1f1f1;
     text-align: center;
-    margin-bottom: 3rem;
   }
  
   .input-container{
@@ -51,8 +50,8 @@
   display:inline-block;
   }
   
- .input-container:first-of-type {
-  margin-right:0.9rem
+ .input-container:first-of-type,  .input-container:nth-of-type(3) {
+  margin-right:0.9rem;
   }
 
   .container h1{

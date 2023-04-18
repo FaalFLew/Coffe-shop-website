@@ -1,11 +1,11 @@
 import '../css/ProductItemPage.css'
 import '../css/Global.css'
-import AddToCart from './AddToCart.js'; 
-import QuantityCounter from './QuantityCounter.js';
-import RecommendedProduct from './RecommendedProduct';
+import AddToCart from '../components/AddToCart.js'; 
+import QuantityCounter from '../components/QuantityCounter.js';
+import RecommendedProduct from '../components/RecommendedProduct';
 import logo from '../img/MockupProduct.png';
 
-const ProductItemPage = () => {
+const ProductItem = () => {
   return (
 <main>
     <div class="product-item">
@@ -44,4 +44,4 @@ const ProductItemPage = () => {
   )
 }
 
-export default ProductItemPage
+export default ProductItem

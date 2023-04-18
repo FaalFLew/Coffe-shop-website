@@ -28,6 +28,10 @@
 
   --recommended-background-color: #f5f5f7;
   --item-size: 230px;
+
+  --counter-height:3rem;
+  --counter-button-width:2rem;
+  --counter-input-width:calc(var(--counter-button-width)*2);
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -46,6 +50,14 @@ a {
   background: transparent;
 }
 
+
+main {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
 
 
 /* Chrome, Safari, Edge, Opera */
