@@ -2,8 +2,9 @@ import '../css/Global.css'
 import '../css/AddToCart.css'
 
 
-const AddToCart = ({color, text, clicked, width}) => {
+const AddToCart = ({color, text,clicked, width}) => {
   
+
   return (
     <>
       <button 

@@ -1,6 +1,6 @@
 import '../css/Global.css'
 import '../css/Cart.css'
-import logo from '../img/MockupProduct.png';
+import logo from '../img/coffe cup.png';
 import QuantityCounter from '../components/QuantityCounter.js';
 
 const Cart = () => {
