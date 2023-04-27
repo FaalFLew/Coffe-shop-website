@@ -3,11 +3,11 @@ import '../css/Shipping.css'
 
 const Shipping = () => {
   return (
-<main>
+<main class="shipping-container">
  <form>
 
   <div class="container">
-    <h1>Create Account</h1>
+    <h1>Shipping details</h1>
     <p>Please fill in this form to create an account.</p>
     <hr />
 <div class="input-container" >

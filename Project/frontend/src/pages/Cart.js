@@ -5,7 +5,7 @@ import QuantityCounter from '../components/QuantityCounter.js';
 
 const Cart = () => {
   return (
-  <main >
+  <main class="shopping-cart-container">
  <ul>
    
  <li>

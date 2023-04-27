@@ -93,7 +93,7 @@
   
   
   /*second product section*/
-  .coffe-products {
+  .coffee-products {
     text-align: center;
     width:100%;
     display: flex;
@@ -103,22 +103,22 @@
     gap:30px 3%;
     margin-bottom: 30px;
   }
-  .coffe-products img {
+  .coffee-products img {
     border-radius:50% ;
   }
   
   
-  .coffe-products figure:nth-child(3) img{
+  .coffee-products figure:nth-child(3) img{
     border-radius: 0;
    }
   
-   .coffe-products figure:nth-child(1){
+   .coffee-products figure:nth-child(1){
     width: 32%;
    }
-   .coffe-products figure:nth-of-type(2){
+   .coffee-products figure:nth-of-type(2){
     width: 32%;
    }
-   .coffe-products figure:nth-of-type(3){
+   .coffee-products figure:nth-of-type(3){
     width: 32%;
    }
   
@@ -177,14 +177,14 @@
       flex-basis: auto;
     }
   
-    /*coffe product section*/
-    .coffe-products figure:nth-child(1){
+    /*coffee product section*/
+    .coffee-products figure:nth-child(1){
       width: 47%;
      }
-     .coffe-products figure:nth-child(2){
+     .coffee-products figure:nth-child(2){
       width: 47%;
      }
-     .coffe-products figure:nth-child(3){
+     .coffee-products figure:nth-child(3){
       width: 70%;
      }
   

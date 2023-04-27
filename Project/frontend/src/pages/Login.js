@@ -3,7 +3,7 @@ import '../css/Login.css'
 
 const Login = () => {
   return (
-    <main>
+    <main class="login-container">
  <form>
  
   <div class="container">

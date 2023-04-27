@@ -1,3 +1,7 @@
+.product-item-container {
+  margin-top: 8rem;
+}
+
 .product-content-container {
   grid-area: product-content;
   margin: 1rem 0;

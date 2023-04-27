@@ -7,7 +7,7 @@ import logo from '../img/MockupProduct.png';
 
 const ProductItem = () => {
   return (
-<main>
+<main class="product-item-container">
     <div class="product-item">
 
         <div class="product-single-image-container"> 

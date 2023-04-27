@@ -9,6 +9,7 @@ import Shipping from './pages/Shipping.js';
 import Options from './components/Options.js';
 import Cart from './pages/Cart.js';
 import Home from './pages/Home.js';
+import RecommendedProduct from './components/RecommendedProduct';
 
 
 
@@ -16,7 +17,10 @@ import Home from './pages/Home.js';
 function App() {
   return (
     <> 
+    <NavBar />
     <Home />
+    <Footer /> 
+
 
     </>
   );

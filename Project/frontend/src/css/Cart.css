@@ -23,6 +23,9 @@
     font-weight: 800;
   }
   
+  .shopping-cart-container {
+    margin-top:10rem;
+  }
   
   @media screen and (max-width: 768px) {
     .cart-item {

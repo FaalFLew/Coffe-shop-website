@@ -1,10 +1,10 @@
 import '../css/Global.css'
-import '../css/ProductCards.css'
+import '../css/Explore.css'
 import ProductCardItem from '../components/ProductCardItem.js';
 
-const ProductCards = () => {
+const Explore = () => {
   return (
-<main>
+<main class="explore-products">
     <div className="cart-card-container"></div>
 
   <div className="products">
@@ -33,4 +33,4 @@ if empty then "no products to show here" message */}
   )
 }
 
-export default ProductCards
+export default Explore

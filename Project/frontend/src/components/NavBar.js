@@ -18,7 +18,7 @@ const NavBar = () => {
 />
               </a></h1></div>
     <div className="nav-div">
-        <h2 className="navbar-title">Coffe Selection</h2>
+        <h2 className="navbar-title">Coffee Selection</h2>
         <ul className="sub-ul">
             <li><a className="first-li fe" href="#Robusta">Robusta</a></li>
             <li><a href="#Excelsa" className="fe">Excelsa</a></li>
