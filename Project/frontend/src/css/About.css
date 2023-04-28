@@ -1,0 +1,23 @@
+.about-us-content {
+    margin-top:8rem;
+    margin-bottom:12rem;
+
+}
+
+.about-us-container {
+    
+    padding: 0.5rem 1.2rem;
+    position: relative;
+}
+
+
+
+.about-us-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the border as needed */
+    background: linear-gradient(to right, transparent, orange, transparent);
+  }

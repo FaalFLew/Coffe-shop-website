@@ -22,8 +22,8 @@ function App() {
     <> 
     <Router>
 
-    <Routing />
     <NavBar />
+    <Routing />
     <Footer /> 
     </Router>
 

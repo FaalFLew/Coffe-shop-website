@@ -6,6 +6,8 @@ import ProductItem from "../pages/ProductItem.js";
 import Login from "../pages/Login.js";
 import Register from "../pages/Register.js";
 import Shipping from "../pages/Shipping.js";
+import About from "../pages/About.js";
+
 import NotFound from "../pages/NotFound.js";
 
 const Routing = () =>{
@@ -18,6 +20,8 @@ const Routing = () =>{
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/shipping" element={<Shipping />} />
+        <Route path="/about" element={<About />} />
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>
