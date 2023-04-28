@@ -3,10 +3,10 @@ import AddToCart from './AddToCart.js';
 import '../css/Global.css'
 import '../css/ProductCardItem.css'
 
-const ProductCardItem = ({img, title, category, price,link}) => {
+const ProductCardItem = ({img, title, category, price,source}) => {
   return (
     <article className="product-card">
-    <a href={link} className="product-card-page">
+    <a href={source} className="product-card-page">
     <div className="product-card-container">
     <figure className="product-image">
       <img src={img} alt="Coffee Bag" />

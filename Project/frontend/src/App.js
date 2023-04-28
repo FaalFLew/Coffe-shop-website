@@ -1,3 +1,6 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routing from './components/Routing.js';
+
 import './App.css';
 import NavBar from './components/NavBar.js';
 import Explore from './pages/Explore.js';
@@ -9,7 +12,7 @@ import Shipping from './pages/Shipping.js';
 import Options from './components/Options.js';
 import Cart from './pages/Cart.js';
 import Home from './pages/Home.js';
-import RecommendedProduct from './components/RecommendedProduct';
+import RecommendedProduct from './components/RecommendedProduct.js';
 
 
 
@@ -17,9 +20,12 @@ import RecommendedProduct from './components/RecommendedProduct';
 function App() {
   return (
     <> 
+    <Router>
+
+    <Routing />
     <NavBar />
-    <Home />
     <Footer /> 
+    </Router>
 
 
     </>
