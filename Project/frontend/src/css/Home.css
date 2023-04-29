@@ -65,6 +65,28 @@
     background:#ff8c00;
   }
   
+  .button-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .button-container .explore-link {
+    background-color: #f5b62e;
+    font-size:18px;
+    font-weight: 600;
+    text-decoration:none;
+    color: #000000;
+    border:#f99c2a 1px solid;
+    padding:10px 20px;
+    margin-top:20px;
+    }
+
+  .button-container .explore-link:hover{
+    transition: all 0.2s;
+    background:#f99c2a;
+  }
+
+
   main { 
     width: 95%;
     max-width: 1440px;
@@ -79,7 +101,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap:0 3%;
-    margin-bottom: 30px;
+    margin-bottom: 4rem;
   }
   
   .featured-products .featured-product-item {
@@ -90,13 +112,8 @@
     background-position-x:0px ;
   }
   
-  .Button-container {
-    width: 100%;
-    margin-top: 30px;
-  }
   
-  
-  /*second product section*/
+  /*coffee product section*/
   .coffee-products {
     text-align: center;
     width:100%;
@@ -107,24 +124,18 @@
     gap:30px 3%;
     margin-bottom: 30px;
   }
-  .coffee-products img {
-    border-radius:50% ;
-  }
   
-  
-  .coffee-products figure:nth-child(3) img{
-    border-radius: 0;
-   }
-  
-   .coffee-products figure:nth-child(1){
+   .coffee-products figure{
     width: 32%;
    }
-   .coffee-products figure:nth-of-type(2){
-    width: 32%;
+
+   .coffee-products figure img {
+    border-radius: 50%;
    }
-   .coffee-products figure:nth-of-type(3){
-    width: 32%;
+   .coffee-products figure:nth-child(3) img {
+    border-radius: 0%;
    }
+
   
   /*general styles*/
   
@@ -137,7 +148,7 @@
 
   .featured-product-item figcaption p {
     padding: 0 10px;
-    position: relative; /* Required for pseudo-element positioning */
+    position: relative;
   }
 
   .featured-product-item figcaption p::after {
@@ -146,8 +157,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px; /* Adjust the height of the border as needed */
-    background: linear-gradient(to right, transparent, orange, transparent);
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffa500, transparent);
   }
   
   .featured-product-item img {
@@ -157,7 +168,7 @@
   
   .heading-container h2, .featured-product-item h2  {
     text-decoration: underline;
-    text-decoration-color: rgb(255, 136, 0);
+    text-decoration-color: #ff8800;
   }
   
   .featured-product-item a{
@@ -287,4 +298,3 @@
       filter:opacity(100%);
     }
   }
-  

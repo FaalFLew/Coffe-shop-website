@@ -13,49 +13,49 @@ import '../css/Home.css'
 const Home = () => {
   return (
     <>
-      <section class="hero-section">
+      <section className="hero-section">
     <h1>Welcome To Pure Coffee</h1>
     <p>Experience café-quality coffee in the comfort of your own home with our premium coffee beans</p>
-    <a href="#" class="link-button">Explore</a>
+    <a href="#" className="link-button">Explore</a>
   </section>
 
 <main>
-  <section class="featured-products">
-    <figure class="featured-product-item">
+  <section className="featured-products">
+    <figure className="featured-product-item">
       <a href="#">
       <img src={chocolate} width="400px"/>
       <figcaption>
         <h2>Dark Chocolate</h2>
-        <p class=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
+        <p className=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
       </figcaption>
     </a>
 
     </figure>
 
-    <figure class="featured-product-item">
+    <figure className="featured-product-item">
       <a href="#">
       <img src={pancakes} width="400px"/>
       <figcaption>
         <h2><b>Fluffy Pancakes</b></h2>
-        <p class=""><em>Start your day off right with our <br/>
+        <p className=""><em>Start your day off right with our <br/>
           fluffy, delicious pancakes - <br/> the perfect breakfast for champions</em></p>
       </figcaption>
     </a>
 
     </figure>
 
-    <figure class="featured-product-item">
+    <figure className="featured-product-item">
     <a href="#">
       <img src={machine} width="400px"/>
       <figcaption>
         <h2><b>Premium Coffee Machine</b></h2>
-        <p class=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
+        <p className=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
       </figcaption>
     </a>
     </figure>
 
-<div class="Button-container">
-  <button class="">Explore Products</button>
+<div className="button-container">
+  <a className="explore-link" href='#'>View Similar Products</a>
 </div>
   </section>
 
@@ -63,41 +63,41 @@ const Home = () => {
 
 
 
-  <div class="heading-container"> <h2>Explore Some of our Premium Coffee Beans</h2></div>
-  <section class="coffee-products">
-    <figure class="featured-product-item">
+  <div className="heading-container"> <h2>Explore Some of our Premium Coffee Beans</h2></div>
+  <section className="coffee-products">
+    <figure className="featured-product-item">
       <a href="#">
       <img src={product1} width="400px"/>
       <figcaption>
         <h2>Choclate Snack</h2>
-        <p class=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
+        <p className=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
       </figcaption>
     </a>
 
     </figure>
 
-    <figure class="featured-product-item">
+    <figure className="featured-product-item">
       <a href="#">
       <img src={product2} width="400px"/>
       <figcaption>
         <h2><b>Ground coffee second</b></h2>
-        <p class=""><em>Start your day off right with our fluffy, delicious pancakes - <br/>the perfect breakfast for champions.</em></p>
+        <p className=""><em>Start your day off right with our fluffy, delicious pancakes - <br/>the perfect breakfast for champions.</em></p>
       </figcaption>
     </a>
     </figure>
 
-    <figure class="featured-product-item">
+    <figure className="featured-product-item">
     <a href="#">
       <img src={product3} width="400px"/>
       <figcaption>
         <h2><b>Ground coffee second</b></h2>
-        <p class=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
+        <p className=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
       </figcaption>
     </a>
     </figure>
 
-    <div class="Button-container">
-      <button>Explore Products</button>
+    <div className="button-container">
+      <a className="explore-link" href='#'>View Similar Products</a>
     </div>
 
   </section>

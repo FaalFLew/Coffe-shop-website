@@ -14,7 +14,7 @@ const NavBar = () => {
   srcSet={`${MobileLogo} 130w, ${DesktopLogo} 230w`}
   sizes="(max-width: 600px) 130px, 230px"
   src={`${MobileLogo}`}
-  alt="Description of the image"
+  alt="Description of the im..g"
 />
               </Link></h1></div>
     <div className="nav-div">
@@ -33,7 +33,7 @@ const NavBar = () => {
     <ul className="main-ul">
         <li><Link to="explore">Explore</Link></li>
         <li><Link to="login">Login</Link></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><Link to="/cart">Cart</Link></li>
         <HamburgerMenu />
 
     </ul>   

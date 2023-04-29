@@ -1,12 +1,13 @@
 import '../css/Global.css'
 import '../css/Login.css'
+import {Link} from 'react-router-dom'
 
 const Login = () => {
   return (
-    <main class="login-container">
+    <main className="login-container">
  <form>
  
-  <div class="container">
+  <div className="container">
     <h1>Login</h1>
     <p>Please fill in this form to create an account.</p>
     <hr />
@@ -16,11 +17,11 @@ const Login = () => {
      <label for="password"><b> Password</b></label>
     <input type="password" placeholder="Password" name="password" required />
     <hr />
-    <button type="submit" class="register-button">Create Account</button>
+    <button type="submit" className="register-button">Create Account</button>
   </div>
   
-  <div class="container signin">
-    <p>Dont have an account? <a class="input-link"  href="#">Register Account</a>.</p>
+  <div className="container signin">
+    <p>Dont have an account? <Link className="input-link"  to="/register">Register Account</Link>.</p>
   </div>
 
  </form>

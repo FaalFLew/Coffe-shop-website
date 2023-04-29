@@ -4,102 +4,102 @@ import logo from '../img/MockupProduct.png';
 
 const RecommendedProduct = () => {
   return (
-    <section className="recommended-products">
+    <section classNameName="recommended-products">
     <h2>Recommended Products</h2>
-    <ul class="carousel x-slide">
-      <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <ul className="carousel x-slide">
+      <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>
         </figcaption>
       </figure>
     </li>
-    <li class="item">
-      <figure class="content-image">
-        <img src={logo} />
-        <figcaption class="content-info">
-            <h3 class="content-title">
+    <li className="item">
+      <figure className="content-image">
+        <img src={logo} alt="something" />
+        <figcaption className="content-info">
+            <h3 className="content-title">
               Coffe bag escula or lorem ispsum
             </h3>
             <span>$5.99</span>

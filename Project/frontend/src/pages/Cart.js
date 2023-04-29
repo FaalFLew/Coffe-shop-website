@@ -5,16 +5,16 @@ import QuantityCounter from '../components/QuantityCounter.js';
 
 const Cart = () => {
   return (
-  <main class="shopping-cart-container">
+  <main className="shopping-cart-container">
  <ul>
    
  <li>
-    <figure class="cart-item">
+    <figure className="cart-item">
         <img
         src={logo}
-        alt="Product Image"
+        alt="Product"
         />
-        <figcaption class="cart-item-details">
+        <figcaption className="cart-item-details">
           <h2>Product Title</h2>
           <p>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -23,18 +23,18 @@ const Cart = () => {
            efficitur suscipit erat a 
           </p>
           <QuantityCounter />
-          <span class="cart-item-price">Price: $5.99</span>
+          <span className="cart-item-price">Price: $5.99</span>
         </figcaption>
     </figure>
    </li>
 
    <li>
-    <figure class="cart-item">
+    <figure className="cart-item">
         <img
         src={logo}
-        alt="Product Image"
+        alt="Product"
         />
-        <figcaption class="cart-item-details">
+        <figcaption className="cart-item-details">
           <h2>Product Title</h2>
           <p>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -43,18 +43,18 @@ const Cart = () => {
            efficitur suscipit erat a 
           </p>
           <QuantityCounter />
-          <span class="cart-item-price">Price: $5.99</span>
+          <span className="cart-item-price">Price: $5.99</span>
         </figcaption>
     </figure>
    </li>
 
    <li>
-    <figure class="cart-item">
+    <figure className="cart-item">
         <img
         src={logo}
-        alt="Product Image"
+        alt="Product"
         />
-        <figcaption class="cart-item-details">
+        <figcaption className="cart-item-details">
           <h2>Product Title</h2>
           <p>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -63,18 +63,18 @@ const Cart = () => {
            efficitur suscipit erat a 
           </p>
           <QuantityCounter />
-          <span class="cart-item-price">Price: $5.99</span>
+          <span className="cart-item-price">Price: $5.99</span>
         </figcaption>
     </figure>
    </li>
 
    <li>
-    <figure class="cart-item">
+    <figure className="cart-item">
         <img
         src={logo}
-        alt="Product Image"
+        alt="Product"
         />
-        <figcaption class="cart-item-details">
+        <figcaption className="cart-item-details">
           <h2>Product Title</h2>
           <p>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -83,18 +83,18 @@ const Cart = () => {
            efficitur suscipit erat a 
           </p>
           <QuantityCounter />
-          <span class="cart-item-price">Price: $5.99</span>
+          <span className="cart-item-price">Price: $5.99</span>
         </figcaption>
     </figure>
    </li>
 
    <li>
-    <figure class="cart-item">
+    <figure className="cart-item">
         <img
         src={logo}
-        alt="Product Image"
+        alt="Product"
         />
-        <figcaption class="cart-item-details">
+        <figcaption className="cart-item-details">
           <h2>Product Title</h2>
           <p>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -103,7 +103,7 @@ const Cart = () => {
            efficitur suscipit erat a 
           </p>
           <QuantityCounter />
-          <span class="cart-item-price">Price: $5.99</span>
+          <span className="cart-item-price">Price: $5.99</span>
         </figcaption>
     </figure>
    </li>
