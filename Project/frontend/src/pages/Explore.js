@@ -1,6 +1,8 @@
 import '../css/Global.css'
 import '../css/Explore.css'
 import ProductCardItem from '../components/ProductCardItem.js';
+import Img from '../img/chocolate.jpg'
+
 
 const Explore = () => {
   return (
@@ -12,7 +14,7 @@ const Explore = () => {
 {/* create a function that displays elements from db
 if empty then "no products to show here" message */}
    <ProductCardItem source={"/productItem"} />
-   <ProductCardItem img="https://www.shutterstock.com/image-photo/harbor-city-trondheim-norway-260nw-1186327096.jpg"/>
+   <ProductCardItem img={Img}/>
    <ProductCardItem />
    <ProductCardItem />
    <ProductCardItem />

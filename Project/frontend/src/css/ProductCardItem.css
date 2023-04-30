@@ -33,7 +33,9 @@
     .product-image img {
     border-bottom:1px solid rgb(166, 166, 166);
     width: 100%;
+    height:300px;
     transition: transform var(--card-transition-transform-time) ease-out;
+    object-fit:cover;
     }
     
     .product-card:hover img {

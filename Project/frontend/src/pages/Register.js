@@ -13,20 +13,20 @@ const Register = () => {
     <p>Please fill in this form to create an account.</p>
     <hr />
 <div className="input-container" >
-    <label for="first-name"><b>First name</b></label>
+    <label htmlFor="first-name"><b>First name</b></label>
     <input type="text" placeholder="Enter First name" name="first-name" required />
 </div>
 <div className="input-container" >
-    <label for="last-name"><b>Last Name</b></label>
+    <label htmlFor="last-name"><b>Last Name</b></label>
     <input type="text" placeholder="Enter Last name" name="last-name" required />
 </div>
-    <label for="email"><b> Email</b></label>
+    <label htmlFor="email"><b> Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required />
     
-     <label for="password"><b> Password</b></label>
+     <label htmlFor="password"><b> Password</b></label>
     <input type="password" placeholder="Password" name="password" required />
     
-     <label for="password-repeat"><b> Repeat Password</b></label>
+     <label htmlFor="password-repeat"><b> Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="password-repeat"  required />
     <hr />
     <p>By creating an account you agree to our <a className="input-link" href="#">Terms & Privacy</a>.</p>
