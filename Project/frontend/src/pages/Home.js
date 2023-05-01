@@ -102,6 +102,9 @@ const Home = () => {
 
   </section>
 <RecommendedProduct />
+<div className='image-section'>
+
+</div>
 </main>
 </>
   )
