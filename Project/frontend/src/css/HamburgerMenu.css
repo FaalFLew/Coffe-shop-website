@@ -1,17 +1,14 @@
 
 .menu-btn {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height:40px;
+    width: 55px;
+    height:30px;
     cursor: pointer;
     transition: all .5s ease-in-out;
     /* border: 3px solid #fff; */
   }
   .menu-btn__burger {
-    width: 27px;
+    width: 28px;
     height: 3px;
     background: #fff;
     border-radius: 5px;
@@ -35,6 +32,7 @@
   .menu-btn__burger::after {
     transform: translateY(10px);
   }
+
   /* ANIMATION */
   .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
@@ -47,3 +45,12 @@
   .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
   }
+
+
+  @media screen and (max-width: 600px) {
+
+ 
+     .menu-btn {
+      width: 40px;
+    }
+    }

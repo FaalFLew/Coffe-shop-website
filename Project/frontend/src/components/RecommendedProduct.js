@@ -4,7 +4,7 @@ import logo from '../img/MockupProduct.png';
 
 const RecommendedProduct = () => {
   return (
-    <section classNameName="recommended-products">
+    <section className="recommended-products">
     <h2>Recommended Products</h2>
     <ul className="carousel x-slide">
       <li className="item">

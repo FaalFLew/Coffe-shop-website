@@ -1,23 +1,21 @@
-import { useState } from 'react';
 import '../css/Global.css'
 import '../css/HamburgerMenu.css'
 
-const HamburgerMenu = ({click}) => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const clicked = () => {
-        setIsOpen(!isOpen);
-      }
+const HamburgerMenu = ({ click, isOpen }) => {
+  const className = `menu-btn ${isOpen ? 'open' : ''}`;
 
-    const className = `menu-btn ${isOpen ? 'open' : ''}`;
+  const handleClick = () => {
+    click();
+  }
 
   return (
-    <li className={className} onClick={clicked}> 
-    <a className={className}>
-    <span class="menu-btn__burger"></span>
-  </a>
-  </li>
-  )
+    <li className={className} onClick={handleClick}>
+      <a className={className}>
+        <span className="menu-btn__burger"></span>
+      </a>
+    </li>
+  );
 }
 
 export default HamburgerMenu
