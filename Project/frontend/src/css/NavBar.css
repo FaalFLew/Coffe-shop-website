@@ -61,10 +61,6 @@
    border-bottom: solid 1px var(--second-text-color);
   }
   
-  #logo-link:hover {
-    border-bottom:solid 2px var(--second-text-color);
-  }
-  
   .nav-div{
    text-align: center;
    align-items: center;
