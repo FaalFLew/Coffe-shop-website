@@ -1,0 +1,16 @@
+.not-found-page {
+    margin-top: 7rem;
+    margin-left: 5rem;
+    font-size: 2rem;
+    padding-bottom: 512px;
+    background-image:url('../img/homebottombackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width:852px) {
+ .not-found-page {
+    background-image: none;
+    font-size: 1.7rem;
+ }
+}
