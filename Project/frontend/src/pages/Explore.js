@@ -11,6 +11,7 @@ const Explore = () => {
   useEffect(() => {
     getProducts();
 }, []);
+  
 
 function getProducts() {
 
@@ -22,13 +23,17 @@ function getProducts() {
   return (
 <main class="explore-products">
     <div className="cart-card-container"></div>
-
+<h1>Products</h1>
   <div className="products">
 
 {/* create a function that displays elements from db
 if empty then "no products to show here" message */}
-{products.map((product,key) =>
-   <ProductCardItem key={key} title={product.Name} price={product.Price}/>
+{products.length > 0 ? (
+  products.map((product,key) => (
+    <ProductCardItem key={key} source={`/productItem/${product.Product_id}`} title={product.Name} price={product.Price} type={product.Product_type} weight={`${product.Weight}g`} img={`${process.env.PUBLIC_URL}/img/${product.Image}`}/>
+  ))
+) : (
+  <p>No products to show here</p>
 )}
    <ProductCardItem source={"/productItem"} />
    <ProductCardItem img={Img}/>

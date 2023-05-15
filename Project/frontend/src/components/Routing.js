@@ -7,7 +7,6 @@ import Login from "../pages/Login.js";
 import Register from "../pages/Register.js";
 import Shipping from "../pages/Shipping.js";
 import About from "../pages/About.js";
-
 import NotFound from "../pages/NotFound.js";
 
 const Routing = () =>{
@@ -16,7 +15,7 @@ const Routing = () =>{
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/productItem" element={<ProductItem />} />
+        <Route path="/productItem/:id" element={<ProductItem />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/shipping" element={<Shipping />} />
