@@ -29,7 +29,7 @@ const NavBar = () => {
 />
               </Link></span></div>
     <div className={navClassName}>
-        <h2 className="navbar-title">Product Selection</h2>
+        <h2 className="navbar-title"><Link to='/explore'>Product Selection</Link></h2>
         <ul className="sub-ul">
       <li>
         <a className="first-li fe" href="#Robusta">Coffee beans</a>

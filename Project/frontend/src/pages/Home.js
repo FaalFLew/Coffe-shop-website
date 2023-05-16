@@ -4,6 +4,7 @@ import pancakes from '../img/pancakes.jpg';
 import product1 from '../img/Product 1.png';
 import product2 from '../img/Product 2.png';
 import product3 from '../img/Product 3.png';
+import { Link } from 'react-router-dom';
 
 import RecommendedProduct from '../components/RecommendedProduct';
 
@@ -16,7 +17,7 @@ const Home = () => {
       <section className="hero-section">
     <h1>Welcome To Pure Coffee</h1>
     <p>Experience café-quality coffee in the comfort of your own home with our premium coffee beans</p>
-    <a href="#" className="link-button">Explore</a>
+    <Link to="/explore" className="link-button">Explore</Link>
   </section>
 
 <main>

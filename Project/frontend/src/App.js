@@ -13,6 +13,7 @@ import Options from './components/Options.js';
 import Cart from './pages/Cart.js';
 import Home from './pages/Home.js';
 import RecommendedProduct from './components/RecommendedProduct.js';
+import ScrollToTop from './components/ScrollToTop.js';
 
 
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <> 
     <Router>
+    <ScrollToTop />
 
     <NavBar />
     <Routing />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/Global.css';
 import '../css/QuantityCounter.css';
 
- const QuantityCounter = () => {
+ const QuantityCounter = (onCountChange) => {
   const [count, setCount] = useState(1);
 
   const handleIncrement = () => {

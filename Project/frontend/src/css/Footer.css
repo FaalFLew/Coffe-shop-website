@@ -54,6 +54,23 @@ font-weight: bold;
 color:var(--main-text-color);
 }
 
+.disclaimer-info {
+  background-color: #1B1A1A;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url('../img/minimalist.jpg');
+  background-position-y:100px ;
+  padding-top: 15px;
+  border-top: 2px solid white;
+}
+.disclaimer-info p {
+  width: 70%;
+  font-size: 13px;
+}
+
 /* For smaller screens */
 @media (max-width: 700px) {
     .footer-menus-section {
@@ -62,7 +79,18 @@ color:var(--main-text-color);
         width: 95%;
         margin: 0 auto;
     }
+    .disclaimer-info p {
+      font-size:9px;
+    }
 }
 
+.newsletter input[type=email] {
+  width: 240px;
+  padding: 12px 20px;
+  border: 1px solid var(--second-text-color);
+  outline: transparent;
+  border-radius: 2px;
+  margin: 0;
+}
 
 

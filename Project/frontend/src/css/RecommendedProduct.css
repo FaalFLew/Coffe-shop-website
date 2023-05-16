@@ -5,8 +5,9 @@
 
   
   .content-image img {
-    width: 100%;
+    width: 198px;
     height: var(--item-size);
+    object-fit: cover;
   }
   
   .carousel {

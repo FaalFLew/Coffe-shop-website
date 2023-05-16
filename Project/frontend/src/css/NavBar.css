@@ -70,7 +70,10 @@
     margin-top: 5px;
     font-size: 20px;
   }
-  
+  .navbar-title a{
+  text-decoration: none;
+    color: var(--main-text-color);
+  }
   .main-ul .menu-btn, .main-ul .menu-btn__burger {
     display: none;
   }

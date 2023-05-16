@@ -54,7 +54,7 @@ const Register = () => {
             <b> Email</b>
           </label>
           <input
-            type="text"
+            type="email"
             placeholder="Enter Email"
             name="Email"
             onChange={handleInput}
