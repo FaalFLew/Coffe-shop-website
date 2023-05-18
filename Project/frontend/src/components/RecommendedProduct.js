@@ -5,7 +5,7 @@ import { useEffect,useState } from 'react';
 import RecommendedProductItem from './RecommendedProductItem.js';
 
 import axios from 'axios';
-const RecommendedProduct = () => {
+const RecommendedProduct = ({currentProductId}) => {
   
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -15,12 +15,13 @@ const RecommendedProduct = () => {
 
 function getProducts() {
 
-  axios.get('http://group15.web-tek.ninja/backend/api/login.php').then(function(response) {
+  axios.get('https://group15.web-tek.ninja/backend/api/login.php').then(function(response) {
       console.log(response.data);
       setProducts(response.data);
   });
 }
 
+const recommended = products.filter((product) => product.Product_id !== currentProductId);
 
 
   return (
@@ -29,9 +30,9 @@ function getProducts() {
     <ul className="carousel x-slide">
 {/* create a function that displays elements from db
 if empty then "no products to show here" message */}
-{products.length > 0 ? (
-  products.map((product,key) => (
-    <RecommendedProductItem key={key} source={`/productItem/${product.Product_id}`} title={product.Name} price={product.Price} type={product.Product_type} weight={`${product.Weight}g`} img={`${process.env.PUBLIC_URL}/img/${product.Image}`} imgAlt={product.Image_alt}/>
+{recommended.length > 0 ? (
+  recommended.map((product,key) => (
+    <RecommendedProductItem key={key} source={`/productItem/${product.Product_id}`} title={product.Name} price={product.Price} img={`${process.env.PUBLIC_URL}/img/${product.Image}`} imgAlt={product.Img_alt}/>
   ))
 ) : (
   <p>No products to show here</p>

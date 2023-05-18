@@ -11,7 +11,7 @@ const HamburgerMenu = ({ click, isOpen }) => {
 
   return (
     <li className={className} onClick={handleClick}>
-      <a className={className}>
+      <a href="#MainMenu" aria-label="Interact with main menu" className={className}>
         <span className="menu-btn__burger"></span>
       </a>
     </li>

@@ -15,8 +15,8 @@
     }
     
     .button:hover {
-      background-color: var(--button-hover-background-color);
-      color:var(--button-hover-color);
-      border-color:var(--button-hover-border-color);
+    background-color: var(--button-hover-background-color);
+    color:var(--button-hover-color);
+    border-color:var(--button-hover-border-color);
 
-      }
+    }

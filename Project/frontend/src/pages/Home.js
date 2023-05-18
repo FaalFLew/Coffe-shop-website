@@ -24,7 +24,7 @@ const Home = () => {
   <section className="featured-products">
     <figure className="featured-product-item">
       <a href="#">
-      <img src={chocolate} width="400px"/>
+      <img src={chocolate} alt="Dark chocolate" width="400px"/>
       <figcaption>
         <h2>Dark Chocolate</h2>
         <p className=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
@@ -35,7 +35,7 @@ const Home = () => {
 
     <figure className="featured-product-item">
       <a href="#">
-      <img src={pancakes} width="400px"/>
+      <img src={pancakes} alt="Fluffy pancakes" width="400px"/>
       <figcaption>
         <h2><b>Fluffy Pancakes</b></h2>
         <p className=""><em>Start your day off right with our <br/>
@@ -47,7 +47,7 @@ const Home = () => {
 
     <figure className="featured-product-item">
     <a href="#">
-      <img src={machine} width="400px"/>
+      <img src={machine} alt="Brewing machine" width="400px"/>
       <figcaption>
         <h2><b>Premium Coffee Machine</b></h2>
         <p className=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
@@ -68,7 +68,7 @@ const Home = () => {
   <section className="coffee-products">
     <figure className="featured-product-item">
       <a href="#">
-      <img src={product1} width="400px"/>
+      <img src={product1} alt="Ground coffee" width="400px"/>
       <figcaption>
         <h2>Choclate Snack</h2>
         <p className=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
@@ -79,7 +79,7 @@ const Home = () => {
 
     <figure className="featured-product-item">
       <a href="#">
-      <img src={product2} width="400px"/>
+      <img src={product2} alt="Green tea" width="400px"/>
       <figcaption>
         <h2><b>Ground coffee second</b></h2>
         <p className=""><em>Start your day off right with our fluffy, delicious pancakes - <br/>the perfect breakfast for champions.</em></p>
@@ -89,7 +89,7 @@ const Home = () => {
 
     <figure className="featured-product-item">
     <a href="#">
-      <img src={product3} width="400px"/>
+      <img src={product3} alt="Ground coffee" width="400px"/>
       <figcaption>
         <h2><b>Ground coffee second</b></h2>
         <p className=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>

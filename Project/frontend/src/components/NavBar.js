@@ -32,13 +32,13 @@ const NavBar = () => {
         <h2 className="navbar-title"><Link to='/explore'>Product Selection</Link></h2>
         <ul className="sub-ul">
       <li>
-        <a className="first-li fe" href="#Robusta">Coffee beans</a>
+        <a className="first-li fe" href="Robusta">Coffee beans</a>
       </li>
       <li>
-        <a href="#Excelsa" className="fe">Pancakes</a>
+        <a href="Excelsa" className="fe">Pancakes</a>
       </li>
       <li>
-        <a href="#Liberica" className="fe">Chocolate</a>
+        <a href="Liberica" className="fe">Chocolate</a>
       </li>
     </ul>
     </div>

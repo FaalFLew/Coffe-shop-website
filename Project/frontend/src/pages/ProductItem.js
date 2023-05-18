@@ -9,6 +9,7 @@ import {useParams} from "react-router-dom";
 import { useEffect,useState } from 'react';
 import axios from 'axios';
 
+
 const ProductItem = () => {
   const [productDetails, setProductDetails] = useState({});
   
@@ -18,7 +19,7 @@ const ProductItem = () => {
 }, []);
 
 function getProductDetails() {
-    axios.get(`http://group15.web-tek.ninja/backend/api/login.php/${id}`).then(function(response) {
+    axios.get(`https://group15.web-tek.ninja/backend/api/login.php/${id}`).then(function(response) {
         console.log(response.data);
         setProductDetails(response.data);
     });
@@ -43,6 +44,9 @@ const cart = JSON.parse(localStorage.getItem('cart')) || {};
   console.log(cart);
 
 }
+
+const params = useParams();
+const productId = parseInt(params.id);
 
   return (
     
@@ -79,7 +83,7 @@ const cart = JSON.parse(localStorage.getItem('cart')) || {};
         </div>
     </div>
 
-<RecommendedProduct />
+<RecommendedProduct currentProductId={productId}/>
 
 </main>
   )
