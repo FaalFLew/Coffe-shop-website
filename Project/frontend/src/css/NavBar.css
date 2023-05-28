@@ -42,7 +42,6 @@
    margin: 0 0.1rem;
   }
   
-  
   .nav-header .main-ul a{
    text-decoration: none;
    color: var(--second-text-color);
@@ -97,7 +96,6 @@
     top:100%;
     right:0;
     width: 100%;
-    height: 30vh;
     display: flex;
     align-items: center;
     flex-direction: column;

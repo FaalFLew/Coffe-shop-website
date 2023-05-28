@@ -11,11 +11,21 @@ $conn = $objDb->connect();
 $method = $_SERVER['REQUEST_METHOD'];
 switch($method) {
     case "GET":
-        $sql = "SELECT * FROM product";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo json_encode($products);
+        $path = explode('/', $_SERVER['REQUEST_URI']);
+        if (isset($path[4]) && is_numeric($path[4])) {
+            $sql = "SELECT products.*, product_type.Product_type FROM products INNER JOIN product_type ON products.Product_type_id = product_type.Product_type_id WHERE products.Product_id = :Product_id";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':Product_id', $path[4]);
+            $stmt->execute();
+            $product = $stmt->fetch(PDO::FETCH_ASSOC);
+            echo json_encode($product);
+        } else {
+            $sql = "SELECT products.*, product_type.Product_type FROM products INNER JOIN product_type ON products.Product_type_id = product_type.Product_type_id";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            echo json_encode($products);
+        }
         break;
     case "POST":
         $user = json_decode(file_get_contents('php://input'));
@@ -33,5 +43,4 @@ switch($method) {
         }
         echo json_encode($response);
         break;
-
 }

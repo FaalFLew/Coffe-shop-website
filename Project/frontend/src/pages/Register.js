@@ -15,7 +15,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://group15.web-tek.ninja/backend/api/login.php', inputs);
+    axios.post('https://group15.web-tek.ninja/backend/api/login.php', inputs);
     console.log(inputs);
   };
 

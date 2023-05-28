@@ -21,28 +21,34 @@ function getProducts() {
   axios.get('https://group15.web-tek.ninja/backend/api/login.php').then(function(response) {
       console.log(response.data);
       setProducts(response.data);
+  }).catch(function (error) {
+    console.log(error);
+    setProducts([]);
   });
 }
-  return (
-<main className="explore-products">
-<h1>Products</h1>
-  <div className="products">
-
-{/* create a function that displays elements from db
-if empty then "no products to show here" message */}
-{products.length > 0 ? (
-  products.map((product,key) => (
-    <ProductCardItem key={key} source={`/productItem/${product.Product_id}`} title={product.Name} price={product.Price} type={product.Product_type} weight={product.Weight} img={`${process.env.PUBLIC_URL}/img/${product.Image}`} imgAlt={product.Img_alt}/>
-  ))
-) : (
-  <p>No products to show here</p>
-)}
-
+return (
+  <main className="explore-products">
+    <h1>Products</h1>
+    <div className="products">
+      {Array.isArray(products) && products.length > 0 ? (
+        products.map((product, key) => (
+          <ProductCardItem
+            key={key}
+            source={`/productItem/${product.Product_id}`}
+            title={product.Name}
+            price={product.Price}
+            type={product.Product_type}
+            weight={product.Weight}
+            img={`${process.env.PUBLIC_URL}/img/${product.Image}`}
+            imgAlt={product.Img_alt}
+          />
+        ))
+      ) : (
+        <p>No products to show here</p>
+      )}
     </div>
-    
+  </main>
+);
+};
 
-</main>
-  )
-}
-
-export default Explore
+export default Explore;

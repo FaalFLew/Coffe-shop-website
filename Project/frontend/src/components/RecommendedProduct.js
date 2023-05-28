@@ -18,10 +18,13 @@ function getProducts() {
   axios.get('https://group15.web-tek.ninja/backend/api/login.php').then(function(response) {
       console.log(response.data);
       setProducts(response.data);
+  }).catch(function (error) {
+    console.log(error);
+    setProducts([]); 
   });
 }
 
-const recommended = products.filter((product) => product.Product_id !== currentProductId);
+const recommended = Array.isArray(products) ? products.filter((product) => product.Product_id !== currentProductId) : [];
 
 
   return (

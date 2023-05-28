@@ -79,6 +79,8 @@ color:var(--main-text-color);
         width: 95%;
         margin: 0 auto;
     }
+
+    .disclaimer-info {background-position-y:150px;}
     .disclaimer-info p {
       font-size:12px;
     }
