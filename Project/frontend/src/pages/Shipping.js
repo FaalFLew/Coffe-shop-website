@@ -2,18 +2,21 @@ import Options from '../components/Options.js';
 import '../css/Shipping.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const Shipping = () => {
    const [products, setProducts] = useState([]);
+   const [inputs, setInput] = useState({});
+   const [selectedCountry, setSelectedCountry] = useState('');
+   const [errorMessage, setErrorMessage] = useState('');
+   const [successMessage, setSuccessMessage] = useState('');
+   
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     const items = Object.values(cart);
     setProducts(items);
     console.log(items)
   }, []);
-  
-  const [inputs, setInput] = useState({});
-  const [selectedCountry, setSelectedCountry] = useState('');
 
   const handleInput = (e) => {
     const { name, value, checked, type } = e.target;
@@ -25,14 +28,19 @@ const Shipping = () => {
     setSelectedCountry(countryValue.label);
     console.log(countryValue.label);
     console.log(selectedCountry);
-
-
   };
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://group15.web-tek.ninja/backend/api/order.php', { ...inputs, Country: selectedCountry, products });
     console.log({ ...inputs, Country: selectedCountry, products });
+    //remove everything from cart in localstorage
+    localStorage.removeItem('cart');
+    setSuccessMessage('Order sent!');
+    navigate('/', { state: { orderSuccess: true } });
+
   };
 
   return (
@@ -96,11 +104,11 @@ const Shipping = () => {
 <div className="input-container" >
     <label htmlFor="zip-code"><b>Zip code</b></label>
     <input 
-    type="text" 
+    type="number" 
     id="zip-code" 
     name="Zip" 
+    className='form-input'
     placeholder="Enter your zip code (e.g. 12345)" 
-    pattern="\d{5}" 
     onChange={handleInput}
     required />
 </div>
@@ -117,6 +125,8 @@ const Shipping = () => {
     <hr />
 
     <button type="submit" className="register-button">Send Order</button>
+    {successMessage && <p className="success-message"  style={{ color: 'green', fontSize:'30px' }}>{successMessage}</p>}
+
   </div>
   
 

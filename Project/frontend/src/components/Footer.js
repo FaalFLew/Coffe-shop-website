@@ -1,7 +1,48 @@
 import '../css/Global.css'
 import '../css/Footer.css'
 import FooterMenuItem from './FooterMenuItem.js'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 const Footer = () => {
+
+  const [inputs, setInputs] = useState({ Newsletter_subscribed: false });
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
+
+
+  const handleInput = (e) => {
+    const { name,value } = e.target;
+    setInputs((prevInputs) => ({ ...prevInputs, [name]: value }));
+
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      await axios.post('https://group15.web-tek.ninja/backend/api/newsletter.php', inputs);
+      console.log(inputs);
+      setErrorMessage('');
+      setSuccessMessage('You are registered to the email list!');
+
+    } catch (error) {
+      if (error.response && error.response.status === 409) {
+        setErrorMessage('*Email is already registered');
+        console.log("email error");
+        setSuccessMessage('');
+
+      } else {
+        setErrorMessage('An error occurred during registration');
+        console.log("else error");
+        setSuccessMessage('');
+
+      }
+    }
+  };
+
+
   return (
 <footer className="site-footer">        
 
@@ -9,8 +50,14 @@ const Footer = () => {
   <div className="newsletter-description-container">
     <p className="newsletter-description">Sign up for our newsletter and receive new product release info</p>
   </div>
-    <form method="post" acceptCharset="UTF-8" className="newsletter-signup-form">
-    <input type="email" className="newsletter-input" placeholder="Enter your email" name="contact[email]" autoCapitalize="off" aria-label="enter-email-to-subscribe" />
+    <form onSubmit={handleSubmit} className="newsletter-signup-form">
+    <input 
+    type="email" 
+    className="newsletter-input" 
+    placeholder="Enter your email" 
+    name="Email" autoCapitalize="off" 
+    aria-label="enter-email-to-subscribe"
+    onChange={handleInput} />
     <button className="newsletter-signup-button button">Sign up</button>
     </form>
 </div>
@@ -19,17 +66,17 @@ const Footer = () => {
 <div className="footer-menus-section">
 
 <FooterMenuItem
-  dataType="Menu"
-  title="Policies"
+  dataType="Contact"
+  title="Get in Touch"
   links={[
-    { url: '#policy', label: 'Policy' },
-    { url: '#trademark', label: 'Trademark' },
+    { url: '/about', label: 'About' },
+    { url: '/contact', label: 'Contact' },
   ]}
 />
 
 <FooterMenuItem
-  dataType="Contact"
-  title="Get in Touch"
+  dataType="Menu"
+  title="Policies"
   links={[
     { url: '#policy', label: 'Policy' },
     { url: '#trademark', label: 'third' },
@@ -37,7 +84,7 @@ const Footer = () => {
 />
 <FooterMenuItem
   dataType="Contact"
-  title="Get in Touch"
+  title="Policies"
   links={[
     { url: '#policy', label: 'Policy' },
     { url: '#trademark', label: 'third' },
@@ -45,7 +92,7 @@ const Footer = () => {
 />
 <FooterMenuItem
   dataType="Contact"
-  title="Get in Touch"
+  title="Policies"
   links={[
     { url: '#policy', label: 'Policy' },
     { url: '#trademark', label: 'third' },
@@ -54,7 +101,7 @@ const Footer = () => {
 
 <FooterMenuItem
   dataType="Payment"
-  title="We Accept"
+  title="Policies"
   links={[
     { url: '#policy', label: 'Policy' },
     { url: '#trademark', label: 'Trademark' },
@@ -65,7 +112,7 @@ const Footer = () => {
 
 <FooterMenuItem
   dataType="Payment"
-  title="We Accept"
+  title="Policies"
   links={[
     { url: '#policy', label: 'Policy' },
     { url: '#trademark', label: 'Trademark' },

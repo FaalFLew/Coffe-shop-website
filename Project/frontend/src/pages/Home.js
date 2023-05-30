@@ -5,6 +5,7 @@ import product1 from '../img/Product 1.png';
 import product2 from '../img/Product 2.png';
 import product3 from '../img/Product 3.png';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import RecommendedProduct from '../components/RecommendedProduct';
 
@@ -12,10 +13,16 @@ import '../css/Home.css'
 
 
 const Home = () => {
+  const location = useLocation();
+  const orderSuccess = location.state && location.state.orderSuccess;
   return (
     <>
+
+      {/* The rest of your Home component */}
       <section className="hero-section">
-    <h1>Welcome To Pure Coffee</h1>
+      {orderSuccess ? (
+        <h1 style={{color:'aqua'}}>Thank You For the Order!</h1>
+        ):<h1>Welcome To Pure Coffee</h1>}
     <p>Experience café-quality coffee in the comfort of your own home with our premium coffee beans</p>
     <Link to="/explore" className="link-button">Explore</Link>
   </section>
@@ -23,40 +30,40 @@ const Home = () => {
 <main>
   <section className="featured-products">
     <figure className="featured-product-item">
-      <a href="#">
+      <Link to="/productItem/9">
       <img src={chocolate} alt="Dark chocolate" width="400px"/>
       <figcaption>
         <h2>Dark Chocolate</h2>
         <p className=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
       </figcaption>
-    </a>
+    </Link>
 
     </figure>
 
     <figure className="featured-product-item">
-      <a href="#">
+      <Link to="/productItem/8">
       <img src={pancakes} alt="Fluffy pancakes" width="400px"/>
       <figcaption>
         <h2><b>Fluffy Pancakes</b></h2>
         <p className=""><em>Start your day off right with our <br/>
           fluffy, delicious pancakes - <br/> the perfect breakfast for champions</em></p>
       </figcaption>
-    </a>
+    </Link>
 
     </figure>
 
     <figure className="featured-product-item">
-    <a href="#">
+    <Link to="/productItem/13">
       <img src={machine} alt="Brewing machine" width="400px"/>
       <figcaption>
         <h2><b>Premium Coffee Machine</b></h2>
         <p className=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
       </figcaption>
-    </a>
+    </Link>
     </figure>
 
 <div className="button-container">
-  <a className="explore-link" href='#'>View Similar Products</a>
+  <Link className="explore-link" to="/underConstruction">View Similar Products</Link>
 </div>
   </section>
 
@@ -67,38 +74,38 @@ const Home = () => {
   <div className="heading-container"> <h2>Explore Some of our Premium Coffee Beans</h2></div>
   <section className="coffee-products">
     <figure className="featured-product-item">
-      <a href="#">
+      <Link to="/productItem/12">
       <img src={product1} alt="Ground coffee" width="400px"/>
       <figcaption>
-        <h2>Choclate Snack</h2>
-        <p className=""><em>Indulge in the rich, decadent flavor of our premium chocolate - a treat for the senses.</em></p>
+        <h2>Brazillian Coffee</h2>
+        <p className=""><em>Indulge in the rich, decadent flavor of our premium Brazillian Coffee - a coffee for the senses.</em></p>
       </figcaption>
-    </a>
+    </Link>
 
     </figure>
 
     <figure className="featured-product-item">
-      <a href="#">
+      <Link to="/productItem/11">
       <img src={product2} alt="Green tea" width="400px"/>
       <figcaption>
-        <h2><b>Ground coffee second</b></h2>
-        <p className=""><em>Start your day off right with our fluffy, delicious pancakes - <br/>the perfect breakfast for champions.</em></p>
+        <h2><b>Green Tea</b></h2>
+        <p className=""><em>Start your day off right with our green tea, delicious tea - <br/>the perfect tea for champions.</em></p>
       </figcaption>
-    </a>
+    </Link>
     </figure>
 
     <figure className="featured-product-item">
-    <a href="#">
+    <Link to="/productItem/10">
       <img src={product3} alt="Ground coffee" width="400px"/>
       <figcaption>
-        <h2><b>Ground coffee second</b></h2>
-        <p className=""><em>Experience café-quality coffee in the comfort of your own home with our premium coffee machine.</em></p>
+        <h2><b>Peru Coffee Beans</b></h2>
+        <p className=""><em>Experience Peru Coffee Beans in the comfort of your own home with our premium coffee machine.</em></p>
       </figcaption>
-    </a>
+    </Link>
     </figure>
 
     <div className="button-container">
-      <a className="explore-link" href='#'>View Similar Products</a>
+      <Link className="explore-link" to="/underConstruction">View Similar Products</Link>
     </div>
 
   </section>

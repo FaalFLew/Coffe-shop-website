@@ -15,7 +15,8 @@ const Register = () => {
   const handleInput = (e) => {
     const { name, value, checked, type } = e.target;
     const inputValue = type === 'checkbox' ? checked : value;
-    setInputs((values) => ({ ...values, [name]: inputValue }));
+    const updatedValue = name === 'Newsletter_subscribed' ? (checked ? true : false) : inputValue;
+    setInputs((values) => ({ ...values, [name]: updatedValue }));
   };
 
   useEffect(() => {
@@ -24,19 +25,22 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //prevent submission
+    //prevent submission if repeat pass dont match
     if (!passwordMatch) {
       return; 
     }
+    const formData = { ...inputs, Newsletter_subscribed: inputs.Newsletter_subscribed ? 1 : 0 };
+
     try {
-      await axios.post('https://group15.web-tek.ninja/backend/api/login.php', inputs);
+      await axios.post('https://group15.web-tek.ninja/backend/api/login.php', formData);
+      console.log(formData);
       console.log(inputs);
       setErrorMessage('');
-      setSuccessMessage('Account has been created an registered in database (login under construction)');
+      setSuccessMessage('Account has been created and registered in database (login under construction)');
 
     } catch (error) {
       if (error.response && error.response.status === 409) {
-        setErrorMessage('Email is already registered');
+        setErrorMessage('*Email is already registered');
         console.log("email error");
         setSuccessMessage('');
 

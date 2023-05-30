@@ -1,6 +1,6 @@
 import QuantityCounter from './QuantityCounter';
-
-const CartItem = ({image, imgAlt, title, description, price}) => {
+import '../css/CartItem.css'
+const CartItem = ({image, imgAlt, title, description, price,remove}) => {
   return (
 <li>
     <figure className="cart-item">
@@ -16,6 +16,8 @@ const CartItem = ({image, imgAlt, title, description, price}) => {
           <QuantityCounter />
           <span className="cart-item-price">Price: {price}</span>
         </figcaption>
+        <button className='remove-cart-item' onClick={remove}>X</button>
+
     </figure>
    </li> 
     )

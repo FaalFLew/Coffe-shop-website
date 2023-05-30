@@ -8,6 +8,9 @@ import Register from "../pages/Register.js";
 import Shipping from "../pages/Shipping.js";
 import About from "../pages/About.js";
 import NotFound from "../pages/NotFound.js";
+import UnderConstruction from "../pages/UnderConstruction.js";
+import Contact from "../pages/Contact.js";
+
 
 
 const Routing = () =>{
@@ -21,6 +24,10 @@ const Routing = () =>{
         <Route path="/register" element={<Register />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/about" element={<About />} />
+        <Route path="/underConstruction" element={<UnderConstruction />} />
+        <Route path="/contact" element={<Contact />} />
+
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>
