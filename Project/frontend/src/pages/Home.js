@@ -17,7 +17,6 @@ const Home = () => {
   const orderSuccess = location.state && location.state.orderSuccess;
   return (
     <>
-
       {/* The rest of your Home component */}
       <section className="hero-section">
       {orderSuccess ? (

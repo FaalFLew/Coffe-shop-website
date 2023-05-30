@@ -32,7 +32,7 @@ const Register = () => {
     const formData = { ...inputs, Newsletter_subscribed: inputs.Newsletter_subscribed ? 1 : 0 };
 
     try {
-      await axios.post('https://group15.web-tek.ninja/backend/api/login.php', formData);
+      await axios.post('https://group15.web-tek.ninja/backend/api/register.php', formData);
       console.log(formData);
       console.log(inputs);
       setErrorMessage('');

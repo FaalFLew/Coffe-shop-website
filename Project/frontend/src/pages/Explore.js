@@ -18,7 +18,7 @@ const Explore = () => {
 
 function getProducts() {
 
-  axios.get('https://group15.web-tek.ninja/backend/api/login.php').then(function(response) {
+  axios.get('https://group15.web-tek.ninja/backend/api/products.php').then(function(response) {
       console.log(response.data);
       setProducts(response.data);
   }).catch(function (error) {

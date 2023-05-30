@@ -19,7 +19,7 @@ const ProductItem = () => {
 }, [id]);
 
 function getProductDetails() {
-    axios.get(`https://group15.web-tek.ninja/backend/api/login.php/${id}`).then(function(response) {
+    axios.get(`https://group15.web-tek.ninja/backend/api/products.php/${id}`).then(function(response) {
         console.log(response.data);
         setProductDetails(response.data);
     }).catch(function (error) {
