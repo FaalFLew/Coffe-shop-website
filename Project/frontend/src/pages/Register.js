@@ -1,24 +1,55 @@
 import '../css/Global.css';
 import '../css/Register.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Register = () => {
-  const [inputs, setInput] = useState({ Newsletter_subscribed: false });
+  const [inputs, setInputs] = useState({ Newsletter_subscribed: false });
+  const [passwordMatch, setPasswordMatch] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
+
 
   const handleInput = (e) => {
     const { name, value, checked, type } = e.target;
     const inputValue = type === 'checkbox' ? checked : value;
-    setInput((values) => ({ ...values, [name]: inputValue }));
+    setInputs((values) => ({ ...values, [name]: inputValue }));
   };
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    setPasswordMatch(inputs.Password === inputs.password_repeat);
+  }, [inputs.Password, inputs.password_repeat]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post('https://group15.web-tek.ninja/backend/api/login.php', inputs);
-    console.log(inputs);
+    //prevent submission
+    if (!passwordMatch) {
+      return; 
+    }
+    try {
+      await axios.post('https://group15.web-tek.ninja/backend/api/login.php', inputs);
+      console.log(inputs);
+      setErrorMessage('');
+      setSuccessMessage('Account has been created an registered in database (login under construction)');
+
+    } catch (error) {
+      if (error.response && error.response.status === 409) {
+        setErrorMessage('Email is already registered');
+        console.log("email error");
+        setSuccessMessage('');
+
+      } else {
+        setErrorMessage('An error occurred during registration');
+        console.log("else error");
+        setSuccessMessage('');
+
+      }
+    }
   };
 
+  
   return (
     <main className="register-container">
       <form onSubmit={handleSubmit}>
@@ -26,69 +57,83 @@ const Register = () => {
           <h1>Create Account</h1>
           <p>Please fill in this form to create an account.</p>
           <hr />
+
           <div className="input-container">
-            <label htmlFor="first_name">
+            <label>
               <b>First name</b>
+              <input
+                type="text"
+                placeholder="Enter First name"
+                name="First_name"
+                onChange={handleInput}
+                autoComplete="on"
+                required
+              />
             </label>
-            <input
-              type="text"
-              placeholder="Enter First name"
-              name="First_name"
-              onChange={handleInput}
-              required
-            />
           </div>
           <div className="input-container">
-            <label htmlFor="Last_name">
+            <label>
               <b>Last Name</b>
+              <input
+                type="text"
+                placeholder="Enter Last name"
+                name="Last_name"
+                onChange={handleInput}
+                required
+              />
             </label>
+          </div>
+          <label>
+            <b>Email</b>
             <input
-              type="text"
-              placeholder="Enter Last name"
-              name="Last_name"
+              type="email"
+              placeholder="Enter Email"
+              name="Email"
+              onChange={handleInput}
+              autoComplete="on"
+              required
+            />
+          </label>
+          {errorMessage && <p className="error-message"  style={{ color: 'red', fontSize:'24px' }}>{errorMessage}</p>}
+
+          <label>
+            <b>Password</b>
+            <input
+              type="password"
+              placeholder="Password"
+              name="Password"
               onChange={handleInput}
               required
             />
-          </div>
-          <label htmlFor="Email">
-            <b> Email</b>
           </label>
-          <input
-            type="email"
-            placeholder="Enter Email"
-            name="Email"
-            onChange={handleInput}
-            required
-          />
 
-          <label htmlFor="Password">
-            <b> Password</b>
+          <label>
+            <b>Repeat Password</b>
+            <input
+              type="password"
+              placeholder="Repeat Password"
+              name="password_repeat"
+              onChange={handleInput}
+              required
+            />
+            {!passwordMatch && (
+              <p className="password-match-message" style={{ color: 'red' }}>
+                Not matching
+              </p>
+            )}
           </label>
-          <input
-            type="password"
-            placeholder="Password"
-            name="Password"
-            onChange={handleInput}
-            required
-          />
 
-          <label htmlFor="password_repeat">
-            <b> Repeat Password</b>
-          </label>
-          <input
-            type="password"
-            placeholder="Repeat Password"
-            name="password_repeat"
-            required
-          />
           <input
             type="checkbox"
             name="Newsletter_subscribed"
             onChange={handleInput}
+            id="Newsletter_subscribed"
             checked={inputs.Newsletter_subscribed || false}
           />
-          <label htmlFor="Newsletter_subscribed"> Subscribe to our Newsletter! </label>
+          <label htmlFor="Newsletter_subscribed"> Subscribe to our Newsletter!</label>
           <hr />
+          {successMessage && <p className="success-message"  style={{ color: 'green', fontSize:'30px' }}>{successMessage}</p>}
+
           <p>
             By creating an account you agree to our{' '}
             <a className="input-link" href="#">
@@ -100,27 +145,20 @@ const Register = () => {
           <button type="submit" className="register-button">
             Create Account
           </button>
-          
         </div>
-        </form>
+      </form>
 
-        <div className="container signin">
-          <p>
-            Already have an account?{' '}
-            <Link className="input-link" to="/login">
-              Login
-            </Link>
-            .
-          </p>
-        </div>
+      <div className="container signin">
+        <p>
+          Already have an account?{' '}
+          <Link className="input-link" to="/login">
+            Login
+          </Link>
+          .
+        </p>
+      </div>
     </main>
-);
-
+  );
 };
 
 export default Register;
-
-
-
-
-

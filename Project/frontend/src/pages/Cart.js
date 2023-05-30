@@ -1,115 +1,44 @@
 import '../css/Global.css'
 import '../css/Cart.css'
-import logo from '../img/coffe cup.png';
-import QuantityCounter from '../components/QuantityCounter.js';
+import CartItem from '../components/CartItem.js';
+import { useEffect,useState } from 'react';
+import {Link} from 'react-router-dom';
+
 
 const Cart = () => {
+  const [cartItems, setCartItems] = useState([]);
+  useEffect(() => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const items = Object.values(cart);
+    setCartItems(items);
+    console.log(items)
+  }, []);
+  
   return (
   <main className="shopping-cart-container">
+    <h1 className='page-title'>Cart items</h1>
  <ul>
-   
- <li>
-    <figure className="cart-item">
-        <img
-        src={logo}
-        alt="Product"
-        />
-        <figcaption className="cart-item-details">
-          <h2>Product Title</h2>
-          <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a lacinia. onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a 
-          </p>
-          <QuantityCounter />
-          <span className="cart-item-price">Price: $5.99</span>
-        </figcaption>
-    </figure>
-   </li>
+    {Array.isArray(cartItems) && cartItems.length > 0 ? (
+        cartItems.map((product, key) => (
+          <CartItem
+            key={key}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+            image={`${process.env.PUBLIC_URL}/img/${product.image}`}
+            imgAlt={product.image_alt}
+          />
+        ))
+      ) : (
+        <p>You have no items in your cart</p>
+      )}
 
-   <li>
-    <figure className="cart-item">
-        <img
-        src={logo}
-        alt="Product"
-        />
-        <figcaption className="cart-item-details">
-          <h2>Product Title</h2>
-          <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a lacinia. onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a 
-          </p>
-          <QuantityCounter />
-          <span className="cart-item-price">Price: $5.99</span>
-        </figcaption>
-    </figure>
-   </li>
-
-   <li>
-    <figure className="cart-item">
-        <img
-        src={logo}
-        alt="Product"
-        />
-        <figcaption className="cart-item-details">
-          <h2>Product Title</h2>
-          <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a lacinia. onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a 
-          </p>
-          <QuantityCounter />
-          <span className="cart-item-price">Price: $5.99</span>
-        </figcaption>
-    </figure>
-   </li>
-
-   <li>
-    <figure className="cart-item">
-        <img
-        src={logo}
-        alt="Product"
-        />
-        <figcaption className="cart-item-details">
-          <h2>Product Title</h2>
-          <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a lacinia. onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a 
-          </p>
-          <QuantityCounter />
-          <span className="cart-item-price">Price: $5.99</span>
-        </figcaption>
-    </figure>
-   </li>
-
-   <li>
-    <figure className="cart-item">
-        <img
-        src={logo}
-        alt="Product"
-        />
-        <figcaption className="cart-item-details">
-          <h2>Product Title</h2>
-          <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a lacinia. onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a onsectetur adipiscing elit. Vivamus
-           efficitur suscipit erat a 
-          </p>
-          <QuantityCounter />
-          <span className="cart-item-price">Price: $5.99</span>
-        </figcaption>
-    </figure>
-   </li>
 
   </ul>
 
+<div className='button-container'>
+<Link to="/shipping" className='explore-link'>Checkout</Link>
+</div>
 </main>
   )
 }

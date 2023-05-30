@@ -7,6 +7,7 @@
     transition: all .5s ease-in-out;
     /* border: 3px solid #fff; */
   }
+
   .menu-btn__burger {
     width: 28px;
     height: 3px;
@@ -15,6 +16,7 @@
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
   }
+
   .menu-btn__burger::before,
   .menu-btn__burger::after {
     content: '';
@@ -26,9 +28,11 @@
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
   }
+
   .menu-btn__burger::before {
     transform: translateY(-10px);
   }
+
   .menu-btn__burger::after {
     transform: translateY(10px);
   }
@@ -48,8 +52,6 @@
 
 
   @media screen and (max-width: 600px) {
-
- 
      .menu-btn {
       width: 40px;
     }

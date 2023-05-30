@@ -24,19 +24,20 @@ const Login = () => {
           <h1>Login</h1>
           <p>Please fill in this form to create an account.</p>
           <hr />
-            <label htmlFor="email">
-              <b>Email</b>
-            </label>
+            <label>
+              <b>Email
             <input
               type="email"
               placeholder="Enter Email"
               name="email"
               onChange={handleInput}
               required
+              autoComplete='on'
             />
-            <label htmlFor="password">
-              <b>Password</b>
+            </b>
             </label>
+            <label>
+              <b>Password
             <input
               type="password"
               placeholder="Password"
@@ -44,6 +45,8 @@ const Login = () => {
               onChange={handleInput}
               required
             />
+            </b>
+            </label>
           <hr />
           <button type="submit" className="register-button">
             Login

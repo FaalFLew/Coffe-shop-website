@@ -13,7 +13,6 @@
     z-index: 999;
   }
   
-  
   .cart-card {
     width:350px;
     background-color: white;
@@ -37,7 +36,6 @@
     margin-bottom: 0.75rem;
   }
   
-  
   .cart-header {
     display: flex;
     justify-content: space-between;
@@ -45,11 +43,9 @@
     margin-bottom: 16px;
   }
   
-  
   .cart-header h2 {
     margin: 0;
   }
-  
   
   .close-button {
     background-color: transparent;
@@ -59,11 +55,9 @@
     font-weight: bold;
   }
   
-  
   .close-button:hover {
     color: #f00;
   }
-  
   
   .cart-body {
     flex: 1;

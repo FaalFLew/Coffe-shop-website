@@ -16,7 +16,7 @@ const ProductItem = () => {
   const {id} = useParams();
   useEffect(() => {
     getProductDetails();
-}, []);
+}, [id]);
 
 function getProductDetails() {
     axios.get(`https://group15.web-tek.ninja/backend/api/login.php/${id}`).then(function(response) {
@@ -34,9 +34,12 @@ const cart = JSON.parse(localStorage.getItem('cart')) || {};
   const productId = productDetails.Product_id;
   if (!cart[productId]) {
     cart[productId] = {
+      id:productDetails.Product_id,
+      title:productDetails.Name,
       price: productDetails.Price,
       description: productDetails.Description,
       image: productDetails.Image,
+      image_alt:productDetails.Img_alt,
       count: 1,
     };
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -45,7 +48,6 @@ const cart = JSON.parse(localStorage.getItem('cart')) || {};
     cart[productId].count += 1;
   }
   console.log(cart);
-
 }
 
 const params = useParams();

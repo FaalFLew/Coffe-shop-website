@@ -36,11 +36,24 @@ switch($method) {
         $stmt->bindParam(':Last_name', $user->Last_name);
         $stmt->bindParam(':Password', $user->Password);
         $stmt->bindParam(':Newsletter_subscribed', $user->Newsletter_subscribed);
-        if($stmt->execute()) {
-            $response =['status' => 1, 'message'=> 'Record created succesfully'];
-        }else {
-            $response =['status' => 0, 'message'=> 'Failed to create record'];
-        }
-        echo json_encode($response);
-        break;
+        
+       // Check if the email is already registered
+       $checkSql = "SELECT COUNT(*) FROM customer WHERE Email = :Email";
+       $checkStmt = $conn->prepare($checkSql);
+       $checkStmt->bindParam(':Email', $user->Email);
+       $checkStmt->execute();
+       $emailExists = $checkStmt->fetchColumn();
+
+       if ($emailExists) {
+           http_response_code(409); // Conflict
+           $response = ['status' => 0, 'message' => 'Email is already registered'];
+       } else {
+           if ($stmt->execute()) {
+               $response = ['status' => 1, 'message' => 'Record created successfully'];
+           } else {
+               $response = ['status' => 0, 'message' => 'Failed to create record'];
+           }
+       }
+       echo json_encode($response);
+       break;
 }

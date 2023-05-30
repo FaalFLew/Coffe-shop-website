@@ -24,7 +24,7 @@
   }
   
   .shopping-cart-container {
-    margin-top:10rem;
+    margin-top:6rem;
   }
   
   @media screen and (max-width: 768px) {
@@ -65,4 +65,7 @@
     display: inline-block;
     margin-right:1rem;
 }
-  
+
+.page-title{
+  margin-bottom: 1rem;
+}

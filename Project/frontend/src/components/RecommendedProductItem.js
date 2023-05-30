@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 const RecommendedProductItem = ({img, title, weight, type,price,source, imgAlt}) => {
   return (
     <Link to={source} className="product-card-link">
-
     <li className="item">
     <figure className="content-image">
       <img src={img} alt={imgAlt} />

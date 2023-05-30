@@ -1,9 +1,7 @@
 .recommended-products {
     margin-bottom: 4rem;
 }
-
-
-  
+ 
   .content-image img {
     width: 198px;
     height: var(--item-size);
