@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+1.you first need to run npm install
+2. then run npm start to start the frontend
+
 ## Available Scripts
 
 In the project directory, you can run:
