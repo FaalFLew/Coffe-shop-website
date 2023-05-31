@@ -25,7 +25,7 @@ const CardPopup = () => {
 
     setTimeout(() => {
       closeCartCard(cardId);
-    }, 555000);
+    }, 6000);
   };
 
   const clickedAddToCart = () => {

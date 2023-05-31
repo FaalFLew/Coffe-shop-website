@@ -82,7 +82,6 @@ const productId = parseInt(params.id);
          <QuantityCounter />
 
          <div className="button-container">
-         <div className="cart-card-container"><CardPopup /></div>
          <AddToCart width={"100%"} clicked={addToCart}/>
          </div>
         </div>
